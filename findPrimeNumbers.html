@@ -7,7 +7,7 @@
 <body>
     <h1>Challenge</h1>
     <script>
-        /* Asal sayıyı bulma fonksiyonu */
+        /* Asal sayıyı doğrulama */
         function isAsal(num) {
             if (num < 2) return false;
             for (let i = 2; i <= Math.sqrt(num); i++) {
@@ -17,7 +17,20 @@
             }
             return true;
         }
+        /* a) En yakın asal sayıyı bulma */
+        function nearestAsal(num) {
+            if (isAsal(num)) return num;
 
+            let down = num - 1
+            let up = num + 1
+
+            while (true) {
+                if (isAsal(down)) return down;
+                if (isAsal(up)) return up;
+                down--;
+                up++;
+            }
+        }
 
     </script>
 </body>
