@@ -31,6 +31,22 @@
                 up++;
             }
         }
+        /* b) En yakın asal sayıların toplamı */
+        function additionAsal(num) {
+            let down = num - 1
+            let up = num + 1
+
+            while (!isAsal(down)) {
+                down--;
+            }
+
+            while (!isAsal(up)) {
+                up++;
+            }
+            return console.log(`${down} + ${up}`, down + up);
+        }
+        additionAsal(100);
+
 
     </script>
 </body>
